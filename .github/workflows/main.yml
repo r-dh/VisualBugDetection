@@ -20,12 +20,12 @@ jobs:
           key: Library
 
       # Test
-      # - name: Run tests
-      #   uses: game-ci/unity-test-runner@v2
-      #   env:
-      #     UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-      #   with:
-      #     githubToken: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run tests
+        uses: game-ci/unity-test-runner@v2
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
 
       # Build
       - name: Build project
@@ -33,10 +33,18 @@ jobs:
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
-          targetPlatform: StandaloneWindows
+          targetPlatform: StandaloneLinux64
+          versioning: Semantic
 
       # Output
-      - uses: actions/upload-artifact@v2
+      - name: Upload build
+        uses: actions/upload-artifact@v2
         with:
           name: Build
           path: build
+
+      - name: Upload test result
+        uses: actions/upload-artifact@v2
+        with:
+          name: Results
+          path: output
