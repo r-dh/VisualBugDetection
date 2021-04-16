@@ -271,26 +271,26 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ML.OnnxRuntime">
-      <HintPath>C:/repo/VisualBugDetection/Assets/Plugins/OnnxRuntime/Microsoft.ML.OnnxRuntime.dll</HintPath>
-    </Reference>
-    <Reference Include="SixLabors.ImageSharp">
-      <HintPath>C:/repo/VisualBugDetection/Assets/Plugins/OnnxRuntime/SixLabors.ImageSharp.dll</HintPath>
-    </Reference>
     <Reference Include="System.Buffers">
-      <HintPath>C:/repo/VisualBugDetection/Assets/Plugins/OnnxRuntime/System.Buffers.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Diagnostics.DiagnosticSource">
-      <HintPath>C:/repo/VisualBugDetection/Assets/Plugins/OnnxRuntime/System.Diagnostics.DiagnosticSource.dll</HintPath>
+      <HintPath>C:/repo/VisualBugDetection/Assets/Plugins/OnnxRuntime/x86_64/System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Memory">
-      <HintPath>C:/repo/VisualBugDetection/Assets/Plugins/OnnxRuntime/System.Memory.dll</HintPath>
+      <HintPath>C:/repo/VisualBugDetection/Assets/Plugins/OnnxRuntime/x86_64/System.Memory.dll</HintPath>
     </Reference>
-    <Reference Include="System.Numerics.Vectors">
-      <HintPath>C:/repo/VisualBugDetection/Assets/Plugins/OnnxRuntime/System.Numerics.Vectors.dll</HintPath>
+    <Reference Include="SixLabors.ImageSharp">
+      <HintPath>C:/repo/VisualBugDetection/Assets/Plugins/OnnxRuntime/x86_64/SixLabors.ImageSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.OnnxRuntime">
+      <HintPath>C:/repo/VisualBugDetection/Assets/Plugins/OnnxRuntime/x86_64/Microsoft.ML.OnnxRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>C:/repo/VisualBugDetection/Assets/Plugins/OnnxRuntime/x86_64/System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>C:/repo/VisualBugDetection/Assets/Plugins/OnnxRuntime/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <HintPath>C:/repo/VisualBugDetection/Assets/Plugins/OnnxRuntime/x86_64/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors">
+      <HintPath>C:/repo/VisualBugDetection/Assets/Plugins/OnnxRuntime/x86_64/System.Numerics.Vectors.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/repo/VisualBugDetection/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
