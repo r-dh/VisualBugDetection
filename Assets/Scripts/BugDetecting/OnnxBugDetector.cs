@@ -10,7 +10,7 @@ using ONNXTest;
 
 namespace Assets.Scripts.BugDetecting
 {
-    class OnnxBugDetector
+    public class OnnxBugDetector
     {
         private string Model;
         public string ModelName;
@@ -80,7 +80,7 @@ namespace Assets.Scripts.BugDetecting
             return await Infer(input);
         }
 
-        public Tensor<float> Color32ToTensor(UnityEngine.Color32[] rawimg)
+        public static Tensor<float> Color32ToTensor(UnityEngine.Color32[] rawimg)
         {            
             UnityEngine.Color32[] img = ArrayPool<UnityEngine.Color32>.Shared.Rent(WIDTH * HEIGHT);
             //Flip upside down over horizontal axis

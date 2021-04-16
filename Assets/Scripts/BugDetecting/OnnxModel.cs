@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 namespace Assets.Scripts.BugDetecting
 {
     [Serializable]
-    class OnnxModel
+    public class OnnxModel
     {
         /// <summary>
         /// Path to the onnx file
         /// </summary>
-        public string ModelPath = "Assets/Models/EfficientNetB3_viking_converted.onnx";
+        public string ModelPath = "Assets/Models/EfficientNetB0_missing_viking.onnx";
         /// <summary>
         /// Descriptive name which will be used to save to textures
         /// </summary>
@@ -24,7 +24,7 @@ namespace Assets.Scripts.BugDetecting
         /// <summary>
         /// Tensor input name as defined in the ONNX file. E.g input_1:0, input_3:0
         /// </summary>
-        public string TensorInputName = "input_3:0";
+        public string TensorInputName = "input_2:0";
 
         public OnnxModel(string model_path, string model_name, string tensor_name, float treshold = 0.1f)
         {
