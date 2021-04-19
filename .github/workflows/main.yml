@@ -19,6 +19,13 @@ jobs:
           path: Library
           key: Library
 
+      # Add dependencies
+      - name: Add dependencies
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '3.1.x'
+      - run: dotnet add Scripts.csproj package Microsoft.ML.OnnxRuntime --version 1.7.0
+
       # Test
       - name: Run tests
         uses: game-ci/unity-test-runner@v2
