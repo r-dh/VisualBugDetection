@@ -53,7 +53,7 @@ namespace Assets.Scripts.BugDetecting
             UnityEngine.Debug.Log("Initialized");
         }
 
-        public IEnumerator CaptureFrame(Action<bool> af_callback)
+        public IEnumerator CaptureFrame(Action<bool> af_callback, bool write_jpg_to_disk)
         {
             if (renderTexture == null)
             {
@@ -72,13 +72,13 @@ namespace Assets.Scripts.BugDetecting
             camera.targetTexture = null;
             RenderTexture.active = null;
 
-            _ = EvaluateResult(screenShot, af_callback); //fire-and-forget
+            _ = EvaluateResult(screenShot, af_callback, write_jpg_to_disk); //fire-and-forget
             yield return new WaitForEndOfFrame(); //Wait for 1 frame between ReadPixels() and GetPixels32() to prevent choking GPU
         }
 
-        public void AnalyseCurrentFrame(Action<bool> callback)
+        public void AnalyseCurrentFrame(Action<bool> callback, bool write_jpg_to_disk)
         {
-            StartCoroutine(CaptureFrame(callback));
+            StartCoroutine(CaptureFrame(callback, write_jpg_to_disk));
         }
 
         public async Task EvaluateResult(Texture2D frame, Action<bool> callback, bool write_jpg_to_disk = true)

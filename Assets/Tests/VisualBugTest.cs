@@ -8,14 +8,14 @@ namespace Tests
 {
     public class VisualBugTest
     {
-        public float TestDuration = 20; // Wandering duration
+        public float TestDuration = 30; // Wandering duration
         public float Interval = 0.03f; // Check for bugs interval
         public bool Canary = true; // Fail as soon as possible
 
         private float dt = 0f;
 
         [UnityTest]
-        [Timeout(180000)] //ms (3 min)
+        [Timeout(60000)] //ms (1 min)
         public IEnumerator VisualBugTestEnumerator()
         {
             bool bugs_found = false;
@@ -39,7 +39,7 @@ namespace Tests
             {
                 if (dt > Interval)
                 {  
-                    af.AnalyseCurrentFrame(((result) => bugs_found = result || bugs_found));
+                    af.AnalyseCurrentFrame(((result) => bugs_found = result || bugs_found), false);
                     dt = 0;
                 }
                 dt += Time.deltaTime;
