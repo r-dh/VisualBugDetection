@@ -71,10 +71,10 @@
     <Compile Include="Assets\Scripts\BugDetecting\WanderBehaviour.cs" />
     <None Include="Assets\Scripts\BugDetecting\Scripts.asmdef" />
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/repo/VisualBugDetection/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/repo/VisualBugDetection/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -266,25 +266,25 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ML.OnnxRuntime">
-      <HintPath>C:/repo/VisualBugDetection/Assets/Plugins/OnnxRuntime/x86_64/Microsoft.ML.OnnxRuntime.dll</HintPath>
+      <HintPath>Assets/Plugins/OnnxRuntime/x86_64/Microsoft.ML.OnnxRuntime.dll</HintPath>
     </Reference>
     <Reference Include="SixLabors.ImageSharp">
-      <HintPath>C:/repo/VisualBugDetection/Assets/Plugins/OnnxRuntime/x86_64/SixLabors.ImageSharp.dll</HintPath>
+      <HintPath>Assets/Plugins/OnnxRuntime/x86_64/SixLabors.ImageSharp.dll</HintPath>
     </Reference>
     <Reference Include="System.Buffers">
-      <HintPath>C:/repo/VisualBugDetection/Assets/Plugins/OnnxRuntime/x86_64/System.Buffers.dll</HintPath>
+      <HintPath>Assets/Plugins/OnnxRuntime/x86_64/System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Diagnostics.DiagnosticSource">
-      <HintPath>C:/repo/VisualBugDetection/Assets/Plugins/OnnxRuntime/x86_64/System.Diagnostics.DiagnosticSource.dll</HintPath>
+      <HintPath>Assets/Plugins/OnnxRuntime/x86_64/System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
     <Reference Include="System.Memory">
-      <HintPath>C:/repo/VisualBugDetection/Assets/Plugins/OnnxRuntime/x86_64/System.Memory.dll</HintPath>
+      <HintPath>Assets/Plugins/OnnxRuntime/x86_64/System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="System.Numerics.Vectors">
-      <HintPath>C:/repo/VisualBugDetection/Assets/Plugins/OnnxRuntime/x86_64/System.Numerics.Vectors.dll</HintPath>
+      <HintPath>Assets/Plugins/OnnxRuntime/x86_64/System.Numerics.Vectors.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>C:/repo/VisualBugDetection/Assets/Plugins/OnnxRuntime/x86_64/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <HintPath>Assets/Plugins/OnnxRuntime/x86_64/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.4f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
