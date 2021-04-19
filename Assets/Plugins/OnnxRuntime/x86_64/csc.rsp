@@ -1,3 +1,5 @@
+-r:Microsoft.ML.OnnxRuntime.dll
+-r:onnxruntime.dll
 -r:SixLabors.ImageSharp.dll
 -r:System.Buffers.dll
 -r:System.Diagnostics.DiagnosticSource.dll
