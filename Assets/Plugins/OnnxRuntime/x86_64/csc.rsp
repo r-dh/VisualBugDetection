@@ -1,0 +1,6 @@
+-r:SixLabors.ImageSharp.dll
+-r:System.Buffers.dll
+-r:System.Diagnostics.DiagnosticSource.dll
+-r:System.Memory.dll
+-r:System.Numerics.Vectors.dll
+-r:System.Runtime.CompilerServices.Unsafe.dll
