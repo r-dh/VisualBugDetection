@@ -17,9 +17,6 @@ namespace Assets.Scripts.BugDetecting
 {
     public class AnalyseFrames : MonoBehaviour
     {
-#if UNITY_STANDALONE_LINUX
-        [DllImport ("onnxruntime")]
-#endif
         //public bool Record = false;
         //public float Interval = 0.5f;
         public List<OnnxModel> models;
