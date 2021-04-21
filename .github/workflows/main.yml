@@ -19,13 +19,6 @@ jobs:
           path: Library
           key: Library
 
-      # Restore dependencies
-      # - name: Restore dependencies
-      #   uses: actions/setup-dotnet@v1
-      #   with:
-      #     dotnet-version: '3.1.x'
-      # - run: dotnet restore VisualBugDetection.sln
-
       # Test
       - name: Run tests
         uses: game-ci/unity-test-runner@v2
@@ -33,6 +26,14 @@ jobs:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      # Upload screenshots from failed test
+      - name: Upload test result
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: Results
+          path: /github/home/.config/unity3d/DAER/VisualBugDetection/output/*
 
       # Build
       - name: Build project
@@ -49,19 +50,3 @@ jobs:
         with:
           name: Build
           path: build
-
-      # Upload unity3d
-      - name: Upload test result
-        if: ${{ failure() }}
-        uses: actions/upload-artifact@v2
-        with:
-          name: Results
-          path: /github/home/.config/unity3d/*
-
-      # Upload workspace
-      - name: Upload test result
-        if: ${{ failure() }}
-        uses: actions/upload-artifact@v2
-        with:
-          name: Results
-          path: /github/workspace/*
