@@ -127,6 +127,10 @@ namespace Assets.Scripts.BugDetecting
             string path = string.Format($"{output_dir}/{positives}_{time_stamp}.jpg");
 
             File.WriteAllBytes(path, jpg);
+
+#if UNITY_EDITOR
+            UnityEngine.Debug.Log($"Wrote image to: {path}");
+#endif
         }
     }
 }

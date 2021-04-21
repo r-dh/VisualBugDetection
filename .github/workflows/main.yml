@@ -56,5 +56,12 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: Results
-          path: ~/.config/unity3d/*
+          path: /github/home/.config/unity3d/*
 
+      # Upload workspace
+      - name: Upload test result
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: Results
+          path: /github/workspace/*
