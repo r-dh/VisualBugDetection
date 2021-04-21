@@ -51,6 +51,7 @@ jobs:
           path: build
 
       - name: Upload test result
+        if: ${{ failure() }}
         uses: actions/upload-artifact@v2
         with:
           name: Results
