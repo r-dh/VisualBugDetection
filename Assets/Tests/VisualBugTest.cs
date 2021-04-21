@@ -39,7 +39,7 @@ namespace Tests
             {
                 if (dt > Interval)
                 {  
-                    af.AnalyseCurrentFrame(((result) => bugs_found = result || bugs_found), false);
+                    af.AnalyseCurrentFrame(((result) => bugs_found = result || bugs_found), true);
                     dt = 0;
                 }
                 dt += Time.deltaTime;
