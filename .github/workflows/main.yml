@@ -27,14 +27,6 @@ jobs:
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
 
-      # Upload screenshots from failed test
-      - name: Upload test result
-        if: ${{ failure() }}
-        uses: actions/upload-artifact@v2
-        with:
-          name: Results
-          path: /github/home/.config/unity3d/DAER/VisualBugDetection/output/*
-
       # Build
       - name: Build project
         uses: game-ci/unity-builder@v2
@@ -50,3 +42,16 @@ jobs:
         with:
           name: Build
           path: build
+
+  upload_images:
+    if: ${{ failure() }}
+    needs: build
+    name: Upload results from failed test
+    runs-on: ubuntu-latest
+    steps:   
+      # Upload screenshots from failed test
+      - name: Upload test result      
+        uses: actions/upload-artifact@v2
+        with:
+          name: Results
+          path: /github/home/.config/unity3d/DAER/VisualBugDetection/output/*.jpg
