@@ -129,7 +129,8 @@ namespace Assets.Scripts.BugDetecting
             File.WriteAllBytes(path, jpg);
 
 #if UNITY_EDITOR
-            UnityEngine.Debug.Log($"Wrote image to: {path}");
+            string[] fileArray = Directory.GetFiles($"{path}", "*.jpg");
+            UnityEngine.Debug.Log($"Wrote image #{fileArray.Length} to: {path}");     
 #endif
         }
     }
