@@ -46,11 +46,11 @@ namespace Assets.Scripts.BugDetecting
             UnityEngine.Debug.Log("Adding " + models[0].ModelName);
             bugDetectors.AddRange(models.Select(model => new OnnxBugDetector(model)));
 
-            string root_dir = Application.persistentDataPath; // Path.GetDirectoryName(Application.dataPath); //Directory.GetCurrentDirectory();
+            string root_dir = Directory.GetCurrentDirectory(); // Application.persistentDataPath; // Path.GetDirectoryName(Application.dataPath); //Directory.GetCurrentDirectory();
             output_dir = Path.Combine(root_dir, "output");
             Directory.CreateDirectory(output_dir);
 
-            UnityEngine.Debug.Log("Initialized");
+            UnityEngine.Debug.Log($"Initialized. Writing data to {output_dir}");
         }
 
         public IEnumerator CaptureFrame(Action<bool> af_callback, bool write_jpg_to_disk)
