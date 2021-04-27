@@ -54,4 +54,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: Results
-          path: /github/home/.config/unity3d/DAER/VisualBugDetection/output/*.jpg
+          path: unity3d/DAER/VisualBugDetection/output/*.jpg
